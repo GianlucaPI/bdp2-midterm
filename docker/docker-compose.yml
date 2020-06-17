@@ -1,0 +1,29 @@
+version: '3'
+services:
+  jupyter-notebook:
+    container_name: jupyter_notebook
+    image: "stefanoroncelli/bdp2-midterm"
+    restart: always
+    environment:
+       GEN_CERT: 'yes'
+    build: .
+    ports: 
+      - "8888:8888"
+    volumes:
+      - /home/ubuntu/bdp2-midterm/work:/home/jovyan/work
+  portainer:
+    container_name: portainer
+    image: portainer/portainer
+    command: -H unix:///var/run/docker.sock
+    environment:
+      GEN_CERT: 'yes'
+    restart: always
+    ports:
+      - 9000:9000
+      - 8000:8000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+
+volumes:
+  portainer_data:
