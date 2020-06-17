@@ -13,8 +13,6 @@ services:
     container_name: portainer
     image: portainer/portainer
     command: -H unix:///var/run/docker.sock
-    environment:
-      GEN_CERT: 'yes'
     restart: always
     ports:
       - 9000:9000
