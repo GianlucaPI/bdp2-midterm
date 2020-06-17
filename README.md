@@ -1,6 +1,6 @@
 # Infrastructure for Bid Data Processing - Midterm review
 This review consists in the implementation of a Jupyter notebook for plotting a basic CoViD dataset. 
-The notebook exists as a docker container inside a stuck with portainer, which facilitates management.
+The notebook exists as a docker container stacked with portainer, which facilitates management.
 The portainer daemon listens on the default port 9000, whereas the the Jupyter notebook listens on port 8888.
 Access to the noteook is possible with a somewhat secure HTTPS conncetion. 
 Unfortunately, since the certificate issued by me, many browsers will complain about its authenticity.
