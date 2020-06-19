@@ -5,7 +5,7 @@ services:
     image: "stefanoroncelli/bdp2-midterm"
     restart: always
     environment: 
-      - GEN_CERT: yes
+      - GEN_CERT: "yes"
     build: .
     ports: 
       - 8888:8888
